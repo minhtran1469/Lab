@@ -1,0 +1,131 @@
+<link rel="stylesheet" href="homeForm.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Topbar -->
+        <div class="topbar">
+                <!-- Menu button (dropdown with sidebar options) -->
+            <span class="icon-menu" style="cursor:pointer; margin-right:20px; position:relative;">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu" style="width:32px;height:32px;" onclick="event.stopPropagation(); var menu = document.getElementById('dropdown-menu'); menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';">
+                <div id="dropdown-menu" style="display:none; position:absolute; top:40px; left:0; background:#fff; border:1px solid #eee; border-radius:6px; box-shadow:0 2px 8px #ddd; min-width:180px; z-index:10;">
+                    <div class="menu-title" style="font-size:16px; font-weight:bold; margin:12px 0 8px 18px;">Menu</div>
+                    <ul style="list-style:none; padding:0 0 0 8px; margin:0;">
+                        <li style="padding:10px 18px; cursor:pointer;">&#11088; Linh Kiện</li>
+                        <li style="padding:10px 18px; cursor:pointer;">&#11088; Màn Hình</li>
+                        <li style="padding:10px 18px; cursor:pointer;">&#11088; Menu Label</li>
+                        <li style="padding:10px 18px; cursor:pointer;">&#11088; Menu Label <span style="margin-left:8px;">&#8645;A</span></li>
+                        <li style="padding:10px 18px; cursor:pointer;">
+                            &#11088; Menu Label <span style="margin-left:8px;">&#8645;A</span>
+                            <div class="desc" style="font-size:12px; color:#888; margin-left:24px;">Menu description.</div>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <!-- Logo -->
+            <span class="icon-logo" style="margin-right:24px;">
+                <img src="example.png" alt="logo" style="width:40px;height:40px;">
+            </span>
+            <!-- Search bar with button -->
+            <div class="search-bar-container" style="display:flex; align-items:center; flex:1; max-width:500px; margin-right:24px;">
+                <input class="search-bar" type="text" placeholder="Hinted search text" style="flex:1; min-width:0;">
+                <button class="search-btn" style="background:none; border:none; cursor:pointer; margin-left:-36px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search" style="width:24px;height:24px;">
+                </button>
+            </div>
+            <!-- Cart icon -->
+            <span class="icon-cart" style="margin-right:24px; cursor:pointer;">
+                <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="cart" title="Cart" style="width:32px;height:32px;">
+            </span>
+            <!-- Account icon -->
+            <span class="icon-account" style="cursor:pointer;" onclick="window.location.href='accountForm.html'">
+                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="account" style="width:32px;height:32px;">
+            </span>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar (đã chuyển option lên menu dropdown, có thể xóa nếu không dùng nữa) -->
+            <!-- <div class="sidebar">...</div> -->
+            <div class="content-area">
+                <div class="main-banner"></div>
+                <div class="sub-banners">
+                    <div class="sub-banner"></div>
+                    <div class="sub-banner"></div>
+                    <div class="sub-banner"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-col">
+                <div style="font-size:28px;">&#120120;</div>
+                <div class="footer-icons">
+                    <span class="icon-x">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="X">
+                    </span>
+                    <span class="icon-instagram">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+                    </span>
+                    <span class="icon-youtube">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384062.png" alt="YouTube">
+                    </span>
+                    <span class="icon-linkedin">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384061.png" alt="LinkedIn">
+                    </span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <strong>Use cases</strong>
+                <ul>
+                    <li>UI design</li>
+                    <li>UX design</li>
+                    <li>Wireframing</li>
+                    <li>Diagramming</li>
+                    <li>Brainstorming</li>
+                    <li>Online whiteboard</li>
+                    <li>Team collaboration</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <strong>Explore</strong>
+                <ul>
+                    <li>Design</li>
+                    <li>Prototyping</li>
+                    <li>Development features</li>
+                    <li>Design systems</li>
+                    <li>Collaboration features</li>
+                    <li>Design process</li>
+                    <li>FigJam</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <strong>Resources</strong>
+                <ul>
+                    <li>Blog</li>
+                    <li>Best practices</li>
+                    <li>Colors</li>
+                    <li>Color wheel</li>
+                    <li>Support</li>
+                    <li>Developers</li>
+                    <li>Resource library</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Dropdown menu toggle
+        document.querySelector('.icon-menu img').onclick = function(e) {
+            e.stopPropagation();
+            var menu = document.getElementById('dropdown-menu');
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        };
+        // Hide dropdown when clicking outside
+        document.body.onclick = function() {
+            var menu = document.getElementById('dropdown-menu');
+            if(menu) menu.style.display = 'none';
+        };
+    </script>
+</body>
+</html>
