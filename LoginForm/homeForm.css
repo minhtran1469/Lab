@@ -1,0 +1,180 @@
+  body {
+            background: #222;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            background: #f6f6f6;
+            margin: 24px auto 0 auto;
+            width: 96vw;
+            min-height: 90vh;
+            border-radius: 0 0 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .topbar {
+            display: flex;
+            align-items: center;
+            padding: 24px 32px 0 32px;
+            background: #f6f6f6;
+            border-radius: 8px 8px 0 0;
+        }
+        .menu-btn {
+            width: 48px;
+            height: 48px;
+            background: none;
+            border: none;
+            font-size: 32px;
+            margin-right: 24px;
+            cursor: pointer;
+        }
+        .supporting-text {
+            background: #222;
+            color: #fff;
+            border-radius: 8px;
+            padding: 12px 32px;
+            margin-right: 24px;
+            border: none;
+            font-size: 15px;
+            min-width: 180px;
+            text-align: center;
+        }
+        .search-bar {
+            background: #ede8f6;
+            border-radius: 16px;
+            padding: 10px 16px;
+            border: none;
+            font-size: 15px;
+            flex: 1;
+            margin-right: 24px;
+            outline: none;
+        }
+        .search-icon {
+            margin-left: -32px;
+            margin-right: 32px;
+            color: #888;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+        .topbar-icons {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .topbar-icons img, .topbar-icons span {
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .topbar-icons .avatar {
+            background: #e6e1fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+        }
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            width: 240px;
+            background: #fff;
+            padding: 24px 0 0 0;
+            border-right: 1px solid #eee;
+            min-height: 600px;
+        }
+        .sidebar .menu-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 32px;
+            margin-bottom: 16px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0 0 0 16px;
+            margin: 0;
+        }
+        .sidebar li {
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            color: #222;
+            cursor: pointer;
+        }
+        .sidebar li .desc {
+            display: block;
+            font-size: 12px;
+            color: #888;
+            margin-left: 24px;
+        }
+        .sidebar li:hover {
+            background: #f6f6f6;
+        }
+        .content-area {
+            flex: 1;
+            padding: 32px 32px 0 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .main-banner {
+            background: #d8d3db;
+            border-radius: 8px;
+            height: 220px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+        .sub-banners {
+            display: flex;
+            gap: 24px;
+        }
+        .sub-banner {
+            background: #d8d3db;
+            border-radius: 8px;
+            flex: 1;
+            height: 160px;
+            box-shadow: 0 2px 8px #ddd;
+        }
+        .footer {
+            background: #fff;
+            padding: 32px 48px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 48px;
+            font-size: 15px;
+            color: #222;
+        }
+        .footer-col {
+            flex: 1;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col li {
+            margin-bottom: 8px;
+            color: #222;
+            font-size: 15px;
+        }
+        .footer-icons {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .footer-icons img {
+            width: 20px;
+            height: 20px;
+        }
+        @media (max-width: 900px) {
+            .container { width: 100vw; }
+            .sidebar { display: none; }
+            .content-area { padding: 16px; }
+            .footer { flex-direction: column; gap: 16px; padding: 24px 8px; }
+        }
