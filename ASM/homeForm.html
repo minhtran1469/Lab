@@ -7,109 +7,141 @@
     <div class="container">
         <!-- Topbar -->
         <div class="topbar">
+            <div class="left-section">
                 <!-- Menu button (dropdown with sidebar options) -->
-            <span class="icon-menu" style="cursor:pointer; margin-right:20px; position:relative;">
-                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu" style="width:32px;height:32px;" onclick="event.stopPropagation(); var menu = document.getElementById('dropdown-menu'); menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';">
-                <div id="dropdown-menu" style="display:none; position:absolute; top:40px; left:0; background:#fff; border:1px solid #eee; border-radius:6px; box-shadow:0 2px 8px #ddd; min-width:180px; z-index:10;">
-                    <div class="menu-title" style="font-size:16px; font-weight:bold; margin:12px 0 8px 18px;">Menu</div>
-                    <ul style="list-style:none; padding:0 0 0 8px; margin:0;">
-                        <li style="padding:10px 18px; cursor:pointer;">&#11088; Linh Kiện</li>
-                        <li style="padding:10px 18px; cursor:pointer;">&#11088; Màn Hình</li>
-                        <li style="padding:10px 18px; cursor:pointer;">&#11088; Menu Label</li>
-                        <li style="padding:10px 18px; cursor:pointer;">&#11088; Menu Label <span style="margin-left:8px;">&#8645;A</span></li>
-                        <li style="padding:10px 18px; cursor:pointer;">
-                            &#11088; Menu Label <span style="margin-left:8px;">&#8645;A</span>
-                            <div class="desc" style="font-size:12px; color:#888; margin-left:24px;">Menu description.</div>
-                        </li>
-                    </ul>
-                </div>
-            </span>
-            <!-- Logo -->
-            <span class="icon-logo" style="margin-right:24px;">
-                <img src="example.png" alt="logo" style="width:40px;height:40px;">
-            </span>
+                <span class="icon-menu" >
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu" id="menu-btn">
+                    <div id="dropdown-menu">
+                        <div class="menu-title">Danh Mục Sản Phẩm</div>
+                        <ul>
+                            <li class="dropdown-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3405/3405802.png" alt="laptop">
+                                Laptop & Máy Tính
+                            </li>
+                            <li class="dropdown-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2777/2777142.png" alt="phone">
+                                Điện Thoại & Tablet
+                            </li>
+                            <li class="dropdown-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/8138/8138510.png" alt="component">
+                                Linh Kiện Máy Tính
+                            </li>
+                            <li class="dropdown-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2404/2404718.png" alt="monitor">
+                                Màn Hình & Phụ Kiện
+                            </li>
+                            <li class="dropdown-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991602.png" alt="gaming">
+                                Gaming Gear
+                            </li>
+                            <li class="dropdown-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3659/3659899.png" alt="network">
+                                Thiết Bị Mạng
+                            </li>
+                        </ul>
+                    </div>
+                </span>
+                <!-- Logo -->
+                <span class="icon-logo">
+                    <img src="logo/logo.png" alt="logo">
+                </span>
+            </div>
             <!-- Search bar with button -->
-            <div class="search-bar-container" style="display:flex; align-items:center; flex:1; max-width:500px; margin-right:24px;">
-                <input class="search-bar" type="text" placeholder="Hinted search text" style="flex:1; min-width:0;">
-                <button class="search-btn" style="background:none; border:none; cursor:pointer; margin-left:-36px;">
-                    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search" style="width:24px;height:24px;">
+            <div class="search-bar-container">
+                <input class="search-bar" type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button class="search-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search">
                 </button>
             </div>
-            <!-- Cart icon -->
-            <span class="icon-cart" style="margin-right:24px; cursor:pointer;">
-                <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="cart" title="Cart" style="width:32px;height:32px;">
-            </span>
-            <!-- Account icon -->
-            <span class="icon-account" style="cursor:pointer;" onclick="window.location.href='accountForm.html'">
-                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="account" style="width:32px;height:32px;">
-            </span>
+            <div class="right-section">
+                <!-- Cart icon -->
+                <span class="icon-cart" onclick="window.location.href='cartForm.html'">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="cart" title="Cart">
+                </span>
+                <!-- Account icon -->
+                <span class="icon-account" onclick="window.location.href='accountForm.html'">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="account">
+                </span>
+                <!-- Contact button -->
+                <span class="icon-contact" onclick="window.location.href='contactForm.html'">
+                    <img src="logo/telephone.png" alt="contact">
+                </span>
+            </div>
         </div>
         <!-- Main Content -->
         <div class="main-content">
             <!-- Sidebar (đã chuyển option lên menu dropdown, có thể xóa nếu không dùng nữa) -->
             <!-- <div class="sidebar">...</div> -->
             <div class="content-area">
-                <div class="main-banner"></div>
+                <div class="main-banner">
+                    <div class="main-banner-featured">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/online-1869201_1280.jpg" alt="Laptop Sale">
+                        <div class="main-banner-caption">Laptop Gaming Mới Nhất 2025 - Giảm giá lên đến 30%</div>
+                    </div>
+                    <div class="main-banner-sub">
+                        <div class="main-banner-sub-item">
+                            <img src="https://cdn.pixabay.com/photo/2014/09/27/13/44/tablet-463488_1280.jpg" alt="Tablet Hot">
+                            <div class="main-banner-sub-caption">Tablet HOT 2025</div>
+                        </div>
+                        <div class="main-banner-sub-item">
+                            <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/monitor-1955729_1280.jpg" alt="Monitor New">
+                            <div class="main-banner-sub-caption">Màn hình mới về</div>
+                        </div>
+                        <div class="main-banner-sub-item">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/18/16/39/phone-1836071_1280.jpg" alt="Phone Hot">
+                            <div class="main-banner-sub-caption">Điện thoại HOT trend</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="sub-banners">
                     <div class="sub-banner"></div>
                     <div class="sub-banner"></div>
                     <div class="sub-banner"></div>
                 </div>
             </div>
-        </div>
-        <!-- Footer -->
+        </div>        <!-- Footer -->
         <div class="footer">
             <div class="footer-col">
-                <div style="font-size:28px;">&#120120;</div>
-                <div class="footer-icons">
-                    <span class="icon-x">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="X">
-                    </span>
-                    <span class="icon-instagram">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
-                    </span>
-                    <span class="icon-youtube">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384062.png" alt="YouTube">
-                    </span>
-                    <span class="icon-linkedin">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384061.png" alt="LinkedIn">
-                    </span>
+                <div class="footer-logo">
+                    <img src="logo/logo.png" alt="logo" class="footer-logo-img">
+                    <p class="footer-desc">Chúng tôi cung cấp các sản phẩm công nghệ chính hãng với dịch vụ chuyên nghiệp.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4138/4138124.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670147.png" alt="YouTube">
+                    </a>
                 </div>
             </div>
             <div class="footer-col">
-                <strong>Use cases</strong>
-                <ul>
-                    <li>UI design</li>
-                    <li>UX design</li>
-                    <li>Wireframing</li>
-                    <li>Diagramming</li>
-                    <li>Brainstorming</li>
-                    <li>Online whiteboard</li>
-                    <li>Team collaboration</li>
+                <h3 class="footer-title">Về Chúng Tôi</h3>
+                <ul class="footer-list">
+                    <li><a href="#">Giới Thiệu</a></li>
+                    <li><a href="#">Tin Tức</a></li>
+                    <li><a href="#">Tuyển Dụng</a></li>
+                    <li><a href="#">Liên Hệ</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <strong>Explore</strong>
-                <ul>
-                    <li>Design</li>
-                    <li>Prototyping</li>
-                    <li>Development features</li>
-                    <li>Design systems</li>
-                    <li>Collaboration features</li>
-                    <li>Design process</li>
-                    <li>FigJam</li>
+                <h3 class="footer-title">Hỗ Trợ Khách Hàng</h3>
+                <ul class="footer-list">
+                    <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
+                    <li><a href="#">Chính Sách Bảo Hành</a></li>
+                    <li><a href="#">Chính Sách Đổi Trả</a></li>
+                    <li><a href="#">Vận Chuyển & Thanh Toán</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <strong>Resources</strong>
-                <ul>
-                    <li>Blog</li>
-                    <li>Best practices</li>
-                    <li>Colors</li>
-                    <li>Color wheel</li>
-                    <li>Support</li>
-                    <li>Developers</li>
-                    <li>Resource library</li>
+                <h3 class="footer-title">Thông Tin Liên Hệ</h3>
+                <ul class="footer-list">
+                    <li class="footer-contact"><img src="https://cdn-icons-png.flaticon.com/512/1402/1402163.png" alt="location" class="footer-contact-icon">123 Đường ABC, Quận XYZ, TP.HCM</li>
+                    <li class="footer-contact"><img src="https://cdn-icons-png.flaticon.com/512/3059/3059502.png" alt="phone" class="footer-contact-icon">1900 1234 567</li>
+                    <li class="footer-contact"><img src="https://cdn-icons-png.flaticon.com/512/3059/3059421.png" alt="email" class="footer-contact-icon">support@example.com</li>
                 </ul>
             </div>
         </div>

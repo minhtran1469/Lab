@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactForm.css">
+</head>
+<body>
+    <div><h2>Contact Us</h2></div>
+    <form class="contact-form" action="#" method="post">
+        <label for="contact-name">Full Name</label><br>
+        <input type="text" id="contact-name" name="contact-name" required><br><br>
+        
+        <label for="contact-email">Email</label><br>
+        <input type="email" id="contact-email" name="contact-email" required><br><br>
+        
+        <label for="contact-subject">Subject</label><br>
+        <input type="text" id="contact-subject" name="contact-subject" required><br><br>
+        
+        <label for="contact-message">Message</label><br>
+        <textarea id="contact-message" name="contact-message" rows="4" required></textarea><br><br>
+        
+        <input type="submit" value="Send Message">
+        <br><br>
+        <button type="button" onclick="window.location.href='homeForm.html'">Back to Home</button>
+    </form>
+</body>
+</html>

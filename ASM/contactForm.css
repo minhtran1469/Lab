@@ -19,7 +19,7 @@ h2 {
     letter-spacing: 1px;
 }
 
-.account-form {
+.contact-form {
     background: #fff;
     padding: 32px;
     border-radius: 12px;
@@ -29,51 +29,61 @@ h2 {
     margin: 0 auto;
 }
 
-.account-form label {
+.contact-form label {
     display: block;
     font-size: 14px;
     color: #555;
     margin-bottom: 6px;
 }
 
-.account-form input[type="text"],
-.account-form input[type="email"],
-.account-form input[type="password"] {
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 14px;
-    transition: all 0.3s;
+    transition: border-color 0.3s;
 }
 
-.account-form input[type="text"]:focus,
-.account-form input[type="email"]:focus,
-.account-form input[type="password"]:focus {
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: vertical;
+    min-height: 120px;
+    transition: border-color 0.3s;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
     outline: none;
     border-color: #4a90e2;
     box-shadow: 0 0 0 2px rgba(74,144,226,0.1);
 }
 
-.account-form input[type="submit"] {
+.contact-form input[type="submit"] {
     background: #4a90e2;
     color: white;
     padding: 12px 24px;
     border: none;
     border-radius: 6px;
     font-size: 16px;
-    font-weight: 500;
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s;
 }
 
-.account-form input[type="submit"]:hover {
+.contact-form input[type="submit"]:hover {
     background: #357abd;
 }
 
-.account-form button {
+.contact-form button {
     background: transparent;
     color: #666;
     padding: 10px 20px;
@@ -86,24 +96,7 @@ h2 {
     transition: all 0.3s;
 }
 
-.account-form button:hover {
+.contact-form button:hover {
     background: #f5f5f5;
     border-color: #ccc;
-}
-
-/* Password field specific styles */
-.account-form input[type="password"] {
-    letter-spacing: 0.1em;
-}
-
-/* Current password field */
-#acc-current-password {
-    border-color: #e0e0e0;
-    background: #fafafa;
-}
-
-/* New password fields */
-#acc-new-password,
-#acc-confirm-password {
-    border-color: #ddd;
 }
