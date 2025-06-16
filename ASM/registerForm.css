@@ -1,5 +1,5 @@
 body {
-    background: #f6f6f6;
+    background-color: wheat;
     min-height: 100vh;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,12 +14,17 @@ h2 {
     font-size: 56px;
     font-weight: bold;
     margin: 0 0 32px 0;
-    color: #222;
+    color: #000000;
     letter-spacing: 1px;
+    font-family: "Brush Script MT", cursive;
 }
 
 .register-form {
-    background: #fff;
+    background-color: wheat;
+    border-top:#222 2px solid;
+    border-bottom: #222 2px solid;
+    border-left: #222 2px solid;
+    border-right: #222 2px solid;
     padding: 28px 28px 18px 28px;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -32,24 +37,25 @@ h2 {
 }
 
 .register-form label {
-    color: #222;
-    font-size: 15px;
+    color: #000000;
+    font-size: 25px;
     margin-bottom: 4px;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Brush Script MT", cursive;
 }
 
 .register-form input[type="text"],
 .register-form input[type="password"],
 .register-form input[type="email"] {
     width: 100%;
-    padding: 8px 10px;
+    padding: 10px 12px;
     margin-bottom: 14px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #1d1d1d;
     border-radius: 5px;
     font-size: 15px;
-    background: #fafafa;
+    background: whitesmoke;
     transition: border 0.2s;
+    font-family: "Brush Script MT", cursive;
 }
 
 .register-form input[type="text"]:focus,
@@ -81,13 +87,14 @@ h2 {
     border-radius: 6px;
     background: #222;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s;
+    font-family: "Brush Script MT", cursive;
 }
 
 .register-form input[type="submit"]:hover,
 .register-form button[type="button"]:hover {
-    background: #444;
+    background: #000000;
 }

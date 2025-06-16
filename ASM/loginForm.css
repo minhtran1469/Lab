@@ -1,5 +1,6 @@
 body {
-    background: #f6f6f6;
+     background-color: wheat;
+    backdrop-filter: blur(2px);
     min-height: 100vh;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -28,17 +29,19 @@ body {
 }
 
 h2 {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: "Brush Script MT", cursive;
     text-align: center;
     font-size: 72px;
     font-weight: bold;
-    margin: 0 0 110px 0;
+    margin: 0 0 32px 0;
     color: #222;
     letter-spacing: 1px;
 }
 
 .login-form {
-    background: #fff;
+   
+    border-radius: 100%;
+    border : 2px solid #000000;
     padding: 28px 28px 18px 28px;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -51,23 +54,24 @@ h2 {
 }
 
 .login-form label {
-    color: #222;
-    font-size: 15px;
+    color: #000000;
+    font-size: 25px;
     margin-bottom:1px;
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif; /* Body Base */
+    font-family: "Brush Script MT", cursive;
 }
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
     width: 100%;
-    padding: 8px 10px;
+    padding: 12px 10px;
     margin-bottom: 14px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #000000;
     border-radius: 5px;
     font-size: 15px;
-    background: #fafafa;
+    background: whitesmoke;
     transition: border 0.2s;
+    font-family: "Brush Script MT", cursive;
 }
 
 .login-form input[type="text"]:focus,
@@ -92,16 +96,18 @@ h2 {
 
 .login-form input[type="submit"],
 .login-form button[type="button"] {
-    flex: 1;
+     flex: 1;
     padding: 10px 0;
     border: none;
     border-radius: 6px;
     background: #222;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s;
+    font-family: "Brush Script MT", cursive;
+}
 }
 
 .login-form input[type="submit"]:hover,
