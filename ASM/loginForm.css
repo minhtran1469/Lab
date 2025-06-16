@@ -108,7 +108,7 @@ h2 {
     transition: background 0.2s;
     font-family: "Brush Script MT", cursive;
 }
-}
+
 
 .login-form input[type="submit"]:hover,
 .login-form button[type="button"]:hover {
