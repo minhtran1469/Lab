@@ -71,9 +71,11 @@ body {
 }
 
 .icon-contact img {
-    margin-right: 130px
+    margin-right: 130px;
+    width: 48px;
+    height: 48px;
 }
-
+.icon-
 .icon-cart img
 {
    margin-right: 30px;
