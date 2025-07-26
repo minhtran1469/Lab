@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="homeForm.css">
+<link rel="stylesheet" href="css/homeForm.css">
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
@@ -7,70 +7,70 @@
 
     <div class="container">
         <!-- Topbar -->
-        <div class="topbar">
-            <div class="left-section">
-                <!-- Logo -->
-                <span class="icon-logo">
-                    <img src="logo/logo1.png" alt="logo">
-                </span>
-            </div>
-            <!-- Menu button (dropdown with sidebar options) -->
-            <span class="icon-menu">
-                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu" id="menu-btn">
-                <div id="dropdown-menu">
-                    <div class="menu-title">Danh Mục Sản Phẩm</div>
-                    <ul>
-                        <li class="dropdown-item">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3405/3405802.png" alt="laptop">
-                            Laptop & Máy Tính
-                        </li>
-                        <li class="dropdown-item">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2777/2777142.png" alt="phone">
-                            Điện Thoại & Tablet
-                        </li>
-                        <li class="dropdown-item">
-                            <img src="https://cdn-icons-png.flaticon.com/512/8138/8138510.png" alt="component">
-                            Linh Kiện Máy Tính
-                        </li>
-                        <li class="dropdown-item">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2404/2404718.png" alt="monitor">
-                            Màn Hình & Phụ Kiện
-                        </li>
-                        <li class="dropdown-item">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2991/2991602.png" alt="gaming">
-                            Gaming Gear
-                        </li>
-                        <li class="dropdown-item">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3659/3659899.png" alt="network">
-                            Thiết Bị Mạng
-                        </li>
-                    </ul>
+        <div class="header-bar" style="padding: 16px 32px;">
+            <div class="topbar">
+                <div class="header-logo">
+                            <img src="logo/logo2.png" alt="logo1">
                 </div>
-            </span>
-            <!-- Search bar with button -->
-            <div class="search-bar-container">
-                <input class="search-bar" type="text" placeholder="Tìm kiếm sản phẩm...">
-                <button class="search-btn">
-                    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search">
-                </button>
-            </div>
-            <div class="right-section">
-                <!-- Cart icon -->
-                <span class="icon-cart" onclick="window.location.href='cartForm.html'">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="cart" title="Cart">
-                </span>
-                <!-- Account icon -->
-                <span class="icon-account" onclick="window.location.href='accountForm.html'">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="account">
-                </span>
-                <!-- Contact button -->
-                <span class="icon-contact" onclick="window.location.href='contactForm.html'">
-                    <img src="logo/telephone.png" alt="contact">
-                </span>
-                <!--logout btn-->
-                <span class="icon-logout" onclick="window.location.href='loginForm.html'">
-                    <img src="logo/logout.png" alt="logout">
-                </span>
+                <div class="header-actions">
+                    
+                        <!-- Nút menu dropdown -->
+                        <span class="icon-menu">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="menu" id="menu-btn">
+                            <div id="dropdown-menu">
+                                <div class="menu-title">Danh Mục Sản Phẩm</div>
+                                <ul>
+                                    <li class="dropdown-item">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/3405/3405802.png" alt="laptop">
+                                        Laptop & Máy Tính
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2777/2777142.png" alt="phone">
+                                        Điện Thoại & Tablet
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/8138/8138510.png" alt="component">
+                                        Linh Kiện Máy Tính
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2404/2404718.png" alt="monitor">
+                                        Màn Hình & Phụ Kiện
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991602.png" alt="gaming">
+                                        Gaming Gear
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/3659/3659899.png" alt="network">
+                                        Thiết Bị Mạng
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                        <!-- Thanh tìm kiếm -->
+                        <div class="search-bar-container">
+                            <input class="search-bar" type="text" placeholder="Tìm kiếm sản phẩm...">
+                            <button class="search-btn">
+                                <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="search">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <!-- Các icon chức năng -->
+                        <span class="icon-cart" onclick="window.location.href='cartForm.html'">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="cart" title="Cart">
+                        </span>
+                        <span class="icon-account" onclick="window.location.href='accountForm.html'">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="account">
+                        </span>
+                        <span class="icon-contact" onclick="window.location.href='contactForm.html'">
+                            <img src="logo/telephone.png" alt="contact">
+                        </span>
+                        <span class="icon-logout" onclick="window.location.href='loginForm.html'">
+                            <img src="logo/logout.png" alt="logout">
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Main Content -->
@@ -80,22 +80,8 @@
             <div class="content-area">
                 <div class="main-banner">
                     <div class="main-banner-featured">
-                        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/online-1869201_1280.jpg" alt="Laptop Sale">
-                        <div class="main-banner-caption">Laptop Gaming Mới Nhất 2025 - Giảm giá lên đến 30%</div>
-                    </div>
-                    <div class="main-banner-sub">
-                        <div class="main-banner-sub-item">
-                            <img src="https://cdn.pixabay.com/photo/2014/09/27/13/44/tablet-463488_1280.jpg" alt="Tablet Hot">
-                            <div class="main-banner-sub-caption">Tablet HOT 2025</div>
-                        </div>
-                        <div class="main-banner-sub-item">
-                            <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/monitor-1955729_1280.jpg" alt="Monitor New">
-                            <div class="main-banner-sub-caption">Màn hình mới về</div>
-                        </div>
-                        <div class="main-banner-sub-item">
-                            <img src="https://cdn.pixabay.com/photo/2016/11/18/16/39/phone-1836071_1280.jpg" alt="Phone Hot">
-                            <div class="main-banner-sub-caption">Điện thoại HOT trend</div>
-                        </div>
+                        <img src="logo/banner1.png" alt="Banner chính">
+                   
                     </div>
                 </div>
                 <div class="sub-banners">

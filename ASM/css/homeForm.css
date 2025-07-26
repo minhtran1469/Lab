@@ -1,10 +1,10 @@
-/* Reset and base styles */
+/* ===== Reset & Base Styles ===== */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: wheat;
-    backdrop-filter: blur(2px); /* glassmorphism blur */
+    backdrop-filter: blur(2px);
     background-size: cover;
     min-height: 100vh;
 }
@@ -12,36 +12,66 @@ body {
 .container {
     position: relative;
     z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
 }
 
-/* Topbar Styles */
+/* ===== Header Styles ===== */
+.header-bar {
+    padding: 16px 32px;
+    background: wheat;
+    backdrop-filter: blur(1000px);
+    border-bottom: 2px solid rgb(231, 193, 121);
+}
+
 .topbar {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 18px 36px; /* 1.5x original 12px 24px */
-    background:wheat;
-    backdrop-filter: blur(1000px); /* glassmorphism blur */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    flex-wrap: wrap;
-    gap: 24px; /* 1.5x original 16px */
-    min-height: 90px; /* Optional: make bar taller */
-    border-bottom: rgb(231, 193, 121) 2px solid;
-}
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 90px;
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+}   
 
-.left-section {
+.header-logo {
     display: flex;
     align-items: center;
-    gap: 24px;
-    min-width: fit-content;
+}
+
+.header-logo img,
+.icon-logo img {
+    width: 48px !important;
+    height: 48px !important;
+    margin-left: 0;
+    display: block;
+    object-fit: contain;
+}
+
+.header-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-search-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
 }
 
 .icon-menu,
 .icon-logo,
 .icon-contact,
 .icon-cart,
-.icon-account {
+.icon-account,
+.icon-logout {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -52,58 +82,35 @@ body {
 .icon-logo img,
 .icon-contact img,
 .icon-cart img,
-.icon-account img {
+.icon-account img,
+.icon-logout img {
     width: 48px;
     height: 48px;
+    margin-right: 10px;
     object-fit: contain;
 }
 
-.icon-logo {
-    margin-left: 70px;
-    height: 10px;;
-    
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 50%;
 }
 
-.icon-logo img {
-    width: 140px;
-    height: 140px;
-    margin-left: 50px;
-}
-
-.icon-contact img {
-    margin-right: 130px;
-    width: 48px;
-    height: 48px;
-}
-.icon-
-.icon-cart img
-{
-   margin-right: 30px;
-}
-.icon-account img {
-    margin-right: 30px;
-}
-
-.icon-menu {
-    margin-left: 290px;
-    cursor: pointer;
-    position: relative;
-}
-
+/* ===== Search Bar ===== */
 .search-bar-container {
     display: flex;
-    align-items:nter;
+    align-items: center;
     flex: 1;
     max-width: 500px;
-    width: 500px;
-    margin-left: 10px; /* 1.5x original 16px */
-    
+    width: 100%;
+    margin-right: 10px;
 }
 
 .search-bar {
     flex: 1;
     min-width: 0;
-    padding: 20px 80px 19px 15px;
+    padding: 20px 300px 19px 15px;
     border: 1px solid #202020;
     border-radius: 25px;
     font-size: 18px;
@@ -124,53 +131,44 @@ body {
     margin-left: -36px;
     padding: 0;
 }
-
+    
 .search-btn img {
     width: 24px;
     height: 24px;
 }
 
-.right-section {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-left: auto;
-}
-
-/* Main Content Area */
+/* ===== Main Content ===== */
 .main-content {
     flex: 1;
     padding: 24px;
-  
     background-color: transparent;
 }
 
 .content-area {
     max-width: 1600px;
     margin: 0 auto;
-   
 }
 
-/* Banner Areas */
+/* ===== Banner Styles ===== */
 .main-banner {
-    width: 100%;
-    background: rgba(255,255,255,0.35); /* semi-transparent for glass effect */
+    width: 100%;    
+    height: 600px;
+    background: rgba(136, 15, 206, 0.889);
     border-radius: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 0px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    backdrop-filter: blur(12px); /* glassmorphism blur */
-    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
     border: 1px solid rgba(255,255,255,0.18);
 }
 
 .main-banner-featured {
     width: 100%;
-    max-width: 100%;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
@@ -180,7 +178,7 @@ body {
 
 .main-banner-featured img {
     width: 100%;
-    height: 320px;
+    height: 600px;
     object-fit: cover;
     display: block;
 }
@@ -252,12 +250,12 @@ body {
 
 .sub-banner {
     height: 0;
-    padding-bottom: 75%; /* 4:3 aspect ratio */
+    padding-bottom: 75%;
     background: #f0f0f0;
     border-radius: 8px;
 }
 
-/* Footer Styles */
+/* ===== Footer Styles ===== */
 .footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -267,14 +265,13 @@ body {
     width: 100%;
     background: transparent;
     padding: 60px 24px;
-    border-top: 2px solid #000000;
+    border-top: 2px solid #000;
     margin-top: auto;
 }
 
 .footer,
 .footer * {
-   
-    color: #000000 !important;
+    color: #000 !important;
 }
 
 .footer-logo-img {
@@ -310,7 +307,7 @@ body {
 .footer-title {
     font-size: 16px;
     margin-bottom: 20px;
-    color: #000000 !important;
+    color: #000 !important;
 }
 
 .footer-list {
@@ -324,18 +321,18 @@ body {
 }
 
 .footer-list a {
-    color: #000000 !important;
+    color: #000 !important;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s;
 }
 
 .footer-list a:hover {
-    color: #000000 !important;
+    color: #000 !important;
 }
 
 .footer-contact {
-    color: #000000 !important;
+    color: #000 !important;
     display: flex;
     align-items: center;
 }
@@ -347,7 +344,7 @@ body {
     vertical-align: middle;
 }
 
-/* Dropdown Menu */
+/* ===== Dropdown Menu ===== */
 #dropdown-menu {
     display: none;
     position: absolute;
@@ -394,117 +391,71 @@ body {
     background: #f5f5f5;
 }
 
-/* Responsive Design */
+/* ===== Responsive Design ===== */
 @media screen and (max-width: 1366px) {
-    .container {
-        max-width: 100%;
-    }
-    
-    .sub-banners {
-        gap: 16px;
-    }
+    .container { max-width: 100%; }
+    .sub-banners { gap: 16px; }
 }
 
 @media screen and (max-width: 1024px) {
-    .topbar {
-        padding: 12px 16px;
+    body {
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
     }
-
-    .main-content {
-        padding: 16px;
-    }
-
-    .sub-banners {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 768px) {
     .container {
-        min-height: 100vh;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
     }
-
     .topbar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 8px;
-        padding: 12px 8px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
-
-    .icon-logo,
-    .icon-menu,
-    .right-section {
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .search-bar-container {
-        max-width: 100%;
-        margin: 0 0 8px 0;
-    }
-
-    /* Adjust main content for 9:16 ratio on mobile */
-    .main-banner {
-        padding-bottom: 177.78%; /* 9:16 ratio for mobile */
-        margin-bottom: 16px;
-    }
-
-    .sub-banners {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .sub-banner {
-        padding-bottom: 177.78%; /* 9:16 ratio for mobile */
-    }
-}
-
-/* Footer Responsive */
-@media screen and (max-width: 768px) {
-    .footer {
-        padding: 40px 16px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .footer-col {
-        max-width: 100%;
-        margin-bottom: 32px;
-    }
-}
-
-/* For very small devices */
-@media screen and (max-width: 375px) {
-    .topbar {
-        padding: 8px;
-    }
-
-    .left-section, .right-section {
-        gap: 8px;
-    }
-
-    .icon-menu img, .icon-logo img, .icon-contact img,
-    .icon-cart img, .icon-account img {
-        width: 28px;
-        height: 28px;
-    }
-
-    .search-bar {
-        font-size: 13px;
-        padding: 8px 32px 8px 12px;
-    }
+    .main-content { padding: 16px; }
+    .sub-banners { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media screen and (max-width: 900px) {
-    .main-banner-featured img {
-        height: 180px;
+    .main-banner-featured img { height: 380px; }
+    .main-banner-sub { flex-direction: column; gap: 12px; }
+    .main-banner-sub-item img { height: 100px; }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
     }
-    .main-banner-sub {
-        flex-direction: column;
-        gap: 12px;
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
     }
-    .main-banner-sub-item img {
-        height: 100px;
-    }
+    .topbar { margin-left:0; flex-direction: row; align-items: center; gap: 0; padding: 12px 8px; }
+    .header-logo, .header-actions { flex: unset; justify-content: flex-start; }
+    .menu-search-row { flex: unset !important; justify-content: flex-start !important; width: auto; min-width: 0; gap: 8px; }
+    .right-section { flex-direction: row !important; align-items: center !important; justify-content: flex-start; width: auto; margin: 0; gap: 8px; }
+    .search-bar-container { flex: unset !important; width: 50vw !important; max-width: 100vw; }
+    .main-banner { padding-bottom: 177.78%; margin-bottom: 16px; }
+    .sub-banners { grid-template-columns: 1fr; gap: 16px; }
+    .sub-banner { padding-bottom: 177.78%; }
+    .footer { padding: 40px 16px; grid-template-columns: 1fr; gap: 32px; }
+    .footer-col { max-width: 100%; margin-bottom: 32px; }
+}
+
+@media screen and (max-width: 375px) {
+    .topbar { padding: 8px; }
+    .left-section, .right-section { gap: 8px; }
+    .icon-menu img, .icon-logo img, .icon-contact img, .icon-cart img, .icon-account img, .icon-logout img { width: 28px; height: 28px; }
+    .search-bar { font-size: 13px; padding: 8px 32px 8px 12px; }
+}
+
+@media screen and (max-width: 384px) {
+    .icon-logo img { width: 90px; height: 1px; margin-left: 0; }
+    .header-logo { justify-content: flex-start; padding-left: 8px; }
 }
