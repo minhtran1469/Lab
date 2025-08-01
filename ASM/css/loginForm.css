@@ -114,3 +114,11 @@ h2 {
 .login-form button[type="button"]:hover {
     background: #444;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        height: 10vh !important;
+        min-height: 10vh !important;
+        max-height: 10vh !important;
+    }
+}
