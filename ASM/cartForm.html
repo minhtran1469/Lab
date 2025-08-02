@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Giỏ Hàng</title>
     <link rel="stylesheet" href="css/cartForm.css">
+    <script src="js/cart.js"></script>
 </head>
 <body>
     <div class="container">
@@ -14,85 +15,34 @@
                 Tiếp tục mua sắm
             </a>
         </div>
+
         <div class="cart-content">
-            <div class="cart-items">
-                <div class="cart-item">
-                    <div class="item-image">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3405/3405802.png" alt="laptop">
-                    </div>
-                    <div class="item-details">
-                        <h3>Laptop Gaming XYZ</h3>
-                        <p class="item-specs">Core i7, 16GB RAM, 512GB SSD</p>
-                        <div class="item-price">25.990.000đ</div>
-                    </div>
-                    <div class="item-quantity">
-                        <button class="qty-btn">-</button>
-                        <input type="number" value="1" min="1">
-                        <button class="qty-btn">+</button>
-                    </div>
-                    <div class="item-total">25.990.000đ</div>
-                    <button class="remove-btn">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" alt="remove">
-                    </button>
-                </div>
-                <div class="cart-item">
-                    <div class="item-image">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991602.png" alt="gaming mouse">
-                    </div>
-                    <div class="item-details">
-                        <h3>Chuột Gaming ABC</h3>
-                        <p class="item-specs">20000 DPI, RGB</p>
-                        <div class="item-price">890.000đ</div>
-                    </div>
-                    <div class="item-quantity">
-                        <button class="qty-btn">-</button>
-                        <input type="number" value="1" min="1">
-                        <button class="qty-btn">+</button>
-                    </div>
-                    <div class="item-total">890.000đ</div>
-                    <button class="remove-btn">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1214/1214428.png" alt="remove">
-                    </button>
-                </div>
+            <!-- Danh sách sản phẩm trống, sẽ được thêm động bằng JS -->
+            <div class="cart-items" id="cart-items">
+                <!-- Sản phẩm sẽ được thêm tại đây bằng JavaScript -->
+                <p style="padding: 20px; color: #555;">Chưa có sản phẩm nào trong giỏ hàng.</p>
             </div>
-            <div class="cart-summary">
-                <h2>Tổng Giỏ Hàng</h2>
-                <div class="summary-row">
+
+            <!-- Phần tổng giỏ hàng -->
+            <div class="cart-summary" style="background-color: #ffffff; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+                <h2 style="margin-bottom: 15px;">Tổng Giỏ Hàng</h2>
+                <div class="summary-row" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
                     <span>Tạm tính:</span>
-                    <span>26.880.000đ</span>
+                    <span id="subtotal">0đ</span>
                 </div>
-                <div class="summary-row">
+                <div class="summary-row" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
                     <span>Giảm giá:</span>
-                    <span>-1.000.000đ</span>
+                    <span id="discount">0đ</span>
                 </div>
-                <div class="summary-row total">
+                <div class="summary-row total" style="display: flex; justify-content: space-between; font-weight: bold; font-size: 18px;">
                     <span>Tổng cộng:</span>
-                    <span>25.880.000đ</span>
+                    <span id="total">0đ</span>
                 </div>
-                <input type="text" placeholder="Nhập mã giảm giá" class="voucher-input">
-                <button class="apply-voucher">Áp dụng</button>
-                <button class="checkout-btn">Tiến hành thanh toán</button>
+                <input type="text" placeholder="Nhập mã giảm giá" class="voucher-input" style="margin-top: 15px; width: 100%; padding: 8px;">
+                <button class="apply-voucher" style="margin-top: 10px; width: 100%;">Áp dụng</button>
+                <button class="checkout-btn" style="margin-top: 10px; width: 100%;">Tiến hành thanh toán</button>
             </div>
         </div>
     </div>
-    <script>
-        // Quantity buttons functionality
-        document.querySelectorAll('.qty-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const input = this.parentElement.querySelector('input');
-                if (this.textContent === '+') {
-                    input.value = parseInt(input.value) + 1;
-                } else if (this.textContent === '-' && input.value > 1) {
-                    input.value = parseInt(input.value) - 1;
-                }
-            });
-        });
-        // Remove button functionality
-        document.querySelectorAll('.remove-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                this.closest('.cart-item').remove();
-            });
-        });
-    </script>
 </body>
 </html>

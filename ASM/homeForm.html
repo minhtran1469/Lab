@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/homeForm.css">
+<script src="js/home.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
@@ -58,6 +59,7 @@
                     <div class="right-section">
                         <!-- Các icon chức năng -->
                         <span class="icon-cart" onclick="window.location.href='cartForm.html'">
+                            <button  id="cartBtn"><span id="cartCount">0</span></button>
                             <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="cart" title="Cart">
                         </span>
                         <span class="icon-account" onclick="window.location.href='accountForm.html'">
@@ -84,18 +86,24 @@
                    
                     </div>
                 </div>
-                <div class="sub-banners">
-                    <div class="sub-banner1">
-                        <!-- ...nội dung banner... -->
-                        <button class="add-to-cart-btn" title="Thêm vào giỏ hàng"></button>
+                <div class="sub-banners"> 
+                    <div class="sub-banner1" onclick="window.location.href='micPage.html'">       <!-- ...nội dung banner... -->
+                       
+                        <img src="logo/mic.png" alt="Mic" style="width:100%;height:auto;">
+                         <button class="btn-sub1" onclick="addToCart('Mic Hyperx', 1200000)">+</button> 
+                        <div class="micProduct"> Mic Hyperx</div>
                     </div>
                     <div class="sub-banner2">
                         <!-- ...nội dung banner... -->
-                        <button class="add-to-cart-btn" title="Thêm vào giỏ hàng"></button>
+                        <img src="logo/keyboard.png" alt="Keyboard" style="width:100%;height:auto;">
+                        <button class="btn-sub2" onclick="addToCart('Bàn phím Corsair', 1000000)">+</button>
+                        <div class="keyboardProduct"> Keyboard Corsair</div>
                     </div>
                     <div class="sub-banner3">
                         <!-- ...nội dung banner... -->
-                        <button class="add-to-cart-btn" title="Thêm vào giỏ hàng"></button>
+                         <img src="logo/mouse.png" alt="Mouse" style="width:100%;height:auto;">
+                        <button class="btn-sub3" onclick="addToCart('Chuột Logitech', 450000)">+</button>
+                        <div class="mouseProduct"> Mouse Logitech</div>
                     </div>
                 </div>
             </div>
@@ -146,18 +154,5 @@
             </div>
         </div>
     </div>
-    <script>
-        // Dropdown menu toggle
-        document.querySelector('.icon-menu img').onclick = function(e) {
-            e.stopPropagation();
-            var menu = document.getElementById('dropdown-menu');
-            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-        };
-        // Hide dropdown when clicking outside
-        document.body.onclick = function() {
-            var menu = document.getElementById('dropdown-menu');
-            if(menu) menu.style.display = 'none';
-        };
-    </script>
 </body>
 </html>
