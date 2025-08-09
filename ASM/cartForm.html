@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="css/cartForm.css">
+    <script src="js/cart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="cart-header">
+            <h1>Giỏ Hàng Của Bạn</h1>
+            <a href="homeForm.html" class="back-btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/2223/2223615.png" alt="back">
+                Tiếp tục mua sắm
+            </a>
+        </div>
+
+        <div class="cart-content">
+            <!-- Danh sách sản phẩm trống, sẽ được thêm động bằng JS -->
+            <div class="cart-items" id="cart-items">
+                <!-- Sản phẩm sẽ được thêm tại đây bằng JavaScript -->
+                <p style="padding: 20px; color: #555;">Chưa có sản phẩm nào trong giỏ hàng.</p>
+            </div>
+
+            <!-- Phần tổng giỏ hàng -->
+            <div class="cart-summary" style="background-color: #ffffff; border: 1px solid #ddd; padding: 20px; border-radius: 8px;">
+                <h2 style="margin-bottom: 15px;">Tổng Giỏ Hàng</h2>
+                <div class="summary-row" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span>Tạm tính:</span>
+                    <span id="subtotal">0đ</span>
+                </div>
+                <div class="summary-row" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span>Giảm giá:</span>
+                    <span id="discount">0đ</span>
+                </div>
+                <div class="summary-row total" style="display: flex; justify-content: space-between; font-weight: bold; font-size: 18px;">
+                    <span>Tổng cộng:</span>
+                    <span id="total">0đ</span>
+                </div>
+                <input type="text" placeholder="Nhập mã giảm giá" class="voucher-input" style="margin-top: 15px; width: 100%; padding: 8px;">
+                <button class="apply-voucher" style="margin-top: 10px; width: 100%;">Áp dụng</button>
+                <button class="checkout-btn" style="margin-top: 10px; width: 100%;">Tiến hành thanh toán</button>
+            </div>
+        </div>
+    </div>
+
+                    <!-- FORM THANH TOÁN (ẩn mặc định) -->
+                <div id="payment-form" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                    background: rgba(0,0,0,0.6); z-index: 9999; ; align-items: center; justify-content: center;">
+                    <div style="background: white; padding: 30px; border-radius: 10px; width: 400px; position: relative;">
+                        <h2>Thông Tin Thanh Toán</h2>
+                        <form id="checkoutForm">
+                            <label for="name">Họ và tên:</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
+
+                            <label for="address">Địa chỉ giao hàng:</label>
+                            <textarea id="address" name="address" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea>
+
+                            <label for="payment-method">Phương thức thanh toán:</label>
+                            <select id="payment-method" name="payment-method" required style="width: 100%; padding: 8px; margin-bottom: 20px;">
+                                <option value="">--Chọn phương thức--</option>
+                                <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                                <option value="bank">Chuyển khoản ngân hàng</option>
+                                <option value="momo">Ví MoMo</option>
+                            </select>
+
+                            <button type="submit" style="width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px;">Xác nhận đặt hàng</button>
+                            <button type="button" id="cancelPayment" style="width: 100%; padding: 10px; margin-top: 10px; background-color: #dc3545; color: white; border: none; border-radius: 5px;">Hủy</button>
+                        </form>
+                    </div>
+                </div>
+
+</body>
+</html>
