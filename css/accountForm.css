@@ -1,0 +1,124 @@
+body {
+    background: wheat;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+    color: #000000;
+    letter-spacing: 1px;
+    font-family: "Brush Script MT", cursive;
+    padding: 0px;
+}
+
+.account-form {
+    background: wheat;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    width: 400px;
+    max-width: 100vw;
+    margin-top: 5px;
+    font-size: 20px;
+    border-top: 2px solid #222;
+    border-right: 2px solid #222;
+    border-left: 2px solid #222;
+    border-bottom: 2px solid #222;
+}
+
+.account-form label {
+    display: block;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 6px;
+    font-family: "Brush Script MT", cursive;
+}
+
+.account-form input[type="text"],
+.account-form input[type="email"],
+.account-form input[type="password"] {
+    width:90%;
+    padding: 12px;
+    margin-bottom: 5px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.account-form input[type="text"]:focus,
+.account-form input[type="email"]:focus,
+.account-form input[type="password"]:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74,144,226,0.1);
+}
+
+.account-form input[type="submit"] {
+    background: #000000;
+    color: rgb(255, 255, 255);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.account-form input[type="submit"]:hover {
+    background: rgb(231, 155, 12);
+}
+
+.account-form button {
+    background: transparent;
+    color: #000000;
+    padding: 10px 20px;
+    border: 1px solid wheat;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.account-form button:hover {
+    background: #f5f5f5;
+    border-color: #ccc;
+}
+
+/* Password field specific styles */
+.account-form input[type="password"] {
+    letter-spacing: 0.1em;
+}
+
+/* Current password field */
+#acc-current-password {
+    border-color: #000000;
+    background: #ffffff;
+     width:90%;
+    padding: 12px;
+    margin-bottom: 5px;
+    
+}
+
+/* New password fields */
+#acc-new-password,
+#acc-confirm-password {
+    border-color: #000000;
+     width:90%;
+    padding: 12px;
+    margin-bottom: 5px;
+}
